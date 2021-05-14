@@ -2,7 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.4.5'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
-    id 'jacoco'
+//    id 'jacoco'
     id "io.freefair.lombok" version "6.0.0-m2"
 }
 
@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -23,9 +24,9 @@ test {
     useJUnitPlatform()
 }
 
-jacocoTestReport {
-    reports {
-        xml.enabled true
-    }
-}
-test.finalizedBy jacocoTestReport
+//jacocoTestReport {
+//    reports {
+//        xml.enabled true
+//    }
+//}
+//test.finalizedBy jacocoTestReport
